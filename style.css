@@ -3,3 +3,20 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    font-family: "DM Serif Text", serif;
+    font-weight: lighter;
+}
+
+:root {
+    
+}
+
+/*
+color scheme:
+    - sidebar and buttons: #EE4266
+    - main section background: #DDE2C6
+    - other sections background (and projec cards): #E6EED6
+    - other colors in the palette (idk for what): #340068, #3993dd
+*/
