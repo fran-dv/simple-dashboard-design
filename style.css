@@ -13,6 +13,70 @@ body {
     
 }
 
+#dashboard {
+    display: grid;
+    background-color: red;
+    grid-template-rows: 1fr 1fr 12fr;
+    grid-template-columns: 3fr 10fr;
+    gap: 2px;
+}
+
+#dashboard > div {
+    background-color: white;
+}
+
+#dashboard > #sidebar {
+    grid-column: 1;
+    grid-row: 1 / -1;
+
+    display: grid;
+    grid-template-rows: 1fr 10fr;
+}
+
+#dashboard > #header {
+    grid-column: 2;
+    grid-row: 1;
+
+    display: grid;
+    grid-template-columns: 10fr 6fr;
+}
+
+
+#dashboard > #profile {
+    grid-column: 2;
+    grid-row: 2;
+    
+    display: grid;
+    grid-template-columns: 10fr 6fr;
+}
+
+#dashboard > #main-section {
+    grid-column: 2;
+    grid-row: 3;
+
+    display: grid;
+    grid-template-columns: 10fr 3fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+#main-section > .project {
+    grid-column: 1;
+    grid-row: 1 / -1;
+}
+
+#main-section > .announcements {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+#main-section > .networking {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+
+
+
 /*
 color scheme:
     - sidebar and buttons: #EE4266
