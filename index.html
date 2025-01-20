@@ -15,35 +15,36 @@
     
     <div id="dashboard">
         <div id="sidebar">
-            <div class="title"><img class="sidebar-logo" src="#" alt="">Bussines Manager</div>
+            <div class="title"><div><span><img class="sidebar-logo" src="./images/sidebar-logo.png" alt=""></span><h1>Bussines Board</h1></div></div>
             <ul class="sidebar-buttons">
-                <li>Home</li>
-                <li>Profile</li>
-                <li>Messages</li>
-                <li>Stakeholders</li>
-                <li>Progress</li>
-                <li>Networking</li>
-
-                <li>Settings</li>
-                <li>Support</li>
-                <li>Privacy</li>
+                <li><span><img class="icon sidebar-sec" src="./images/icons/home.svg" alt="home"></span><a href="#">Home</a></li>
+                <li><span><img class="icon sidebar-sec" src="./images/icons/profile.svg" alt="profile"></span><a href="#">Profile</a></li>
+                <li><span><img class="icon sidebar-sec" src="./images/icons/messages.svg" alt="messages"></span><a href="#">Messages</a></li>
+                <li><span><img class="icon sidebar-sec" src="./images/icons/stakeholders.svg" alt="stakeholders"></span><a href="#">Stakeholders</a></li>
+                <li><span><img class="icon sidebar-sec" src="./images/icons/progress.svg" alt="progress"></span><a href="#">Progress</a></li>
+                <li><span><img class="icon sidebar-sec" src="./images/icons/networking.svg" alt="networking"></span><a href="#">Networking</a></li>
+                <li></li>
+                <li><span><img class="icon sidebar-sec" src="./images/icons/settings.svg" alt="settings"></span><a href="#">Settings</a></li>
+                <li><span><img class="icon sidebar-sec" src="./images/icons/support.svg" alt="support"></span><a href="#">Support</a></li>
+                <li><span><img class="icon sidebar-sec" src="./images/icons/privacy.svg" alt="privacy"></span><a href="#">Privacy</a></li>
             </ul>
         </div>
         <div id="header">
             <div class="search">
-
+                <img class="icon search-sec" src="./images/icons/search.svg" alt="search icon">
+                <input type="text" class="search-box">
             </div>
             <div class="user-shortcuts">
-                <div class="notifications"></div>
-                <div class="user-img"><img src="" alt=""></div>
-                <div class="user-name"><p class="username"></p></div>
-
+                <img src="./images/icons/notifications.svg" class="icon notifications">
+                <img class="user-img header" src="./images/profile-pic.png" alt="Nicholas Vaughn photo">
+                <div class="user-name"><h1 class="username">Nicholas Vaughn</h1></div>
             </div>
         </div>
         <div id="profile">
             <div class="user-info">
-                <div class="user-img"><img src="" alt=""></div>
-                <div class="user-name"><p class="username"></p></div>
+                <img class="user-img profile" src="./images/profile-pic.png" alt="Nicholas Vaughn photo">
+                <p class="greeting">Your goals are waiting,</p>
+                <h1 class="username">Nicholas Vaughn</h1>
             </div>
             <div class="user-actions">
                 <button>New Project</button>
@@ -52,12 +53,12 @@
             </div>
         </div>
         <div id="main-section">
+            <h2 class="projects-title">Your Projects</h2>
             <div class="projects">
-                <h2>Your Projects</h2>
 
                 <div class="project">
-                    <h1>Project Title</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    <h1 class="title">Project Title</h1>
+                    <p class="preview">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                        Consectetur beatae dolorem, ab harum officiis, sequi sint
                     </p>
                     <div class="project-buttons">
@@ -68,8 +69,8 @@
                 </div>
 
                 <div class="project">
-                    <h1>Project Title</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    <h1 class="title">Project Title</h1>
+                    <p class="preview">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                        Consectetur beatae dolorem, ab harum officiis, sequi sint
                     </p>
                     <div class="project-buttons">
@@ -80,8 +81,8 @@
                 </div>
 
                 <div class="project">
-                    <h1>Project Title</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    <h1 class="title">Project Title</h1>
+                    <p class="preview">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                        Consectetur beatae dolorem, ab harum officiis, sequi sint
                     </p>
                     <div class="project-buttons">
@@ -92,8 +93,8 @@
                 </div>
 
                 <div class="project">
-                    <h1>Project Title</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    <h1 class="title">Project Title</h1>
+                    <p class="preview">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                        Consectetur beatae dolorem, ab harum officiis, sequi sint
                     </p>
                     <div class="project-buttons">
@@ -104,8 +105,8 @@
                 </div>
 
                 <div class="project">
-                    <h1>Project Title</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    <h1 class="title">Project Title</h1>
+                    <p class="preview">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                        Consectetur beatae dolorem, ab harum officiis, sequi sint
                     </p>
                     <div class="project-buttons">
@@ -116,8 +117,8 @@
                 </div>
 
                 <div class="project">
-                    <h1>Project Title</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    <h1 class="title">Project Title</h1>
+                    <p class="preview">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                        Consectetur beatae dolorem, ab harum officiis, sequi sint
                     </p>
                     <div class="project-buttons">
@@ -128,9 +129,11 @@
                 </div>
 
             </div>
+
+            <h2 class="announcements-title">Announcements</h2>
 
             <div class="announcements">
-                <h2>Announcements</h2>
+                
 
                 <div class="announcement">
                     <h1>Anouncement title</h1>
@@ -156,8 +159,10 @@
 
             </div>
 
+            <h2 class="networking-title">Networking</h2>
+
             <div class="networking">
-                <h2>Networking</h2>
+                
 
                 <div class="partner">
                     <img class="partner-img" src="" alt="">
