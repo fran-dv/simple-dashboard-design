@@ -24,6 +24,7 @@ color scheme:
     --general-font-color: #f4f7ed;
     --header-font-color: #0f1109;
     --card-decoration-color: #340068;
+    --secondary-font-color: #666666;
 }
 
 input {
@@ -36,8 +37,9 @@ input[type=text] {
 }
 
 #dashboard {
+    height: 110vh;
     display: grid;
-    grid-template-rows: 0.7fr 1fr 13fr;
+    grid-template-rows: 0.7fr 0.8fr 13fr;
     grid-template-columns: min(20vw, 450px) 1fr;
 }
 
@@ -63,11 +65,12 @@ input[type=text] {
 .title {
     grid-row: 1;
     display: grid;
-    grid-template-rows: 1;
-    grid-template-columns: 1;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
     padding: 0.4rem;
     justify-content: center;
     align-content: center;
+    margin-left: 3%;
 }
 
 .title > div {
@@ -79,18 +82,20 @@ input[type=text] {
 .title > div > span {
     align-self: center;
     justify-self: end;
+    margin: 0 20% 0 20%;
 }
 
 .title > div > span > .sidebar-logo {
-    width: min(4vw, 3rem);
+    width: 2vw;
     height: auto;
-    margin-right: 0.4rem;
+    filter: brightness(0) saturate(100%) invert(99%) sepia(33%) saturate(317%) hue-rotate(328deg) brightness(104%) contrast(92%);
 }
 
 .title > div > h1{
     font-size: min(3vw, 2.4rem);
     align-self: center;
     color: var(--general-font-color);
+    margin-left: 2%;
 }
 
 .sidebar-buttons {
@@ -154,13 +159,14 @@ input[type=text] {
 }
 
 .icon.search-sec {
-    width: 2.3vw;
+    width: 2vw;
     height: auto;
+    align-self: center;
 }
 
 #header > .search > .search-box {
     width: 43vw;
-    height: 2.5rem;
+    height: 2vw;
     background-color: var(--main-section-bg);
     border-radius: 2rem;
     border: none;
@@ -175,7 +181,7 @@ input[type=text] {
 }
 
 .icon.notifications {
-    max-width: 2vw;
+    max-width: 1.7vw;
     height: auto;
 }
 
@@ -211,6 +217,7 @@ input[type=text] {
     padding-left: 2.3%;
     z-index: 1;
     background-color: var(--general-bg);
+    height: fit-content;
     
     -webkit-box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.3);
     -moz-box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.3);
@@ -274,6 +281,11 @@ input[type=text] {
     letter-spacing: 0.1em;
 }
 
+#dashboard > #header,
+#dashboard > #profile {
+    background-color: var(--general-bg);
+}
+
 /* profile end */
 
 /*  */
@@ -284,7 +296,7 @@ input[type=text] {
 
     display: grid;
     grid-template-columns: 10fr 4fr;
-    grid-template-rows: 5vh 35vh 5vh 35vh;
+    grid-template-rows: 5vh 35vh 3vh 35vh;
 
     background-color: var(--main-section-bg);
 }
@@ -302,7 +314,7 @@ input[type=text] {
 
     display: grid;
     grid-template-columns: repeat(auto-fit, 25vw);
-    grid-template-rows: repeat(auto-fit, 20vh);
+    grid-template-rows: repeat(auto-fit, 22vh);
     grid-auto-flow: dense;
     gap: 4%;
     padding: 2% 0 0 4%;
@@ -311,7 +323,7 @@ input[type=text] {
 #main-section > .projects > .project {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 20% 60% 20%;
+    grid-template-rows: 30% 50% 20%;
     background-color: var(--card-decoration-color);
     border-radius: 0.6rem;
 
@@ -321,21 +333,43 @@ input[type=text] {
 
 }
 
-.projects > .project > .title {
-    grid-row: 1;
-    grid-column: 1;
+#main-section > .projects > .project > .title {
     border-radius: 0 0.6rem 0 0;
+    font-size: 1.5vw;
+    text-align: start;
+    padding-top: 5%;
 }
 
 .projects > .project > .preview {
     grid-row: 2;
     grid-column: 1;
+    font-size: 0.8vw;
+    color: var(--secondary-font-color);
 }
 
-.projects > .project > .project-buttons {
+#main-section > .projects > .project > .project-buttons {
     grid-row: 3;
     grid-column: 1;
     border-radius: 0 0 0.6rem 0;
+    align-content: baseline;
+
+    display: grid;
+    grid-template-columns: repeat(3, 10%);
+    justify-content: end;
+    gap: 2%;
+}
+
+.projects > .project > .project-buttons > a {
+    justify-self: center;
+}
+
+.projects > .project > .project-buttons > a > img {
+    width: 1.5vw;
+    height: auto;
+}
+
+.projects > .project > .project-buttons > a > .star:hover {
+    filter: brightness(0) saturate(100%) invert(94%) sepia(84%) saturate(3086%) hue-rotate(335deg) brightness(99%) contrast(100%);
 }
 
 .projects > .project > .title,
@@ -347,6 +381,10 @@ input[type=text] {
     padding: 0 10% 0 10%;
 }
 
+/* projects end */
+
+/* announcements start */
+
 #main-section > .announcements-title {
     grid-column: 2;
     grid-row: 1;
@@ -357,12 +395,53 @@ input[type=text] {
     grid-column: 2;
     grid-row: 2;
 
+    width: 85%;
+    height: 95%;
+    align-self: center;
     display: grid;
     grid-template-columns: 1;
-    grid-template-rows: repeat(3, 1fr);
-    gap: 4%;
+    grid-template-rows: 1fr 0.1fr 1fr 0.1fr 1fr;
     padding: 2% 4% 0 0;
+    background-color: var(--general-bg);
+    border-radius: 0.6rem;
+    padding: 5% 10%;
 }
+
+.announcements > .announcement {
+    align-self: center;
+}
+
+.announcements > .announcement > h1 {
+    font-size: 1vw;
+    font-weight: 600;
+}
+
+.announcements > .announcement > p {
+    font-size: 0.7vw;
+    color: var(--secondary-font-color);
+}
+
+.announcements > hr {
+    background-color: var(--secondary-font-color);
+    height: 1px;
+    text-align: center;
+}
+
+.announcement.a > h1::after {
+    content: ' 🚀';
+}
+
+.announcement.b > h1::after {
+    content: ' 💼';
+}
+
+.announcement.c > h1::after {
+    content: ' 📢';
+}
+
+/* announcements end */
+
+/* networking start */
 
 #main-section > .networking-title {
     grid-column: 2;
@@ -373,12 +452,54 @@ input[type=text] {
 #main-section > .networking {
     grid-column: 2;
     grid-row: 4;
+
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: repeat(4, 1fr);
+    background-color: var(--general-bg);
+    border-radius: 0.6rem;
+    width: 85%;
+    height: 95%;
+    align-self: center;
+    align-items: space-evenly;
+    padding: 5% 5%;
 }
 
-#dashboard > #header,
-#dashboard > #profile {
-    background-color: var(--general-bg);
+.networking > .partner {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 1fr;
 }
+
+.networking > .partner > .partner-img {
+    grid-column: 1;
+    grid-row: 1 / -1;
+    width: 3vw;
+    align-self: center;
+    justify-self: center;
+}
+
+.networking > .partner > h1 {
+    grid-column: 2;
+    grid-row: 1;
+    font-size: 1vw;
+    font-weight: 600;
+    align-content: end;
+    margin-left: 7%;
+}
+
+.networking > .partner > p {
+    grid-column: 2;
+    grid-row: 2;
+    font-size: 0.9vw;
+    color: var(--secondary-font-color);
+    margin-left: 7%;
+}
+
+
+/* networking end */
+
+
 
 
 /*
